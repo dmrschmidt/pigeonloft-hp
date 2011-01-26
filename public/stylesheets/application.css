@@ -1,0 +1,93 @@
+#user_nav {
+  text-align: right;
+}
+
+body {
+  background-color: #dadada;
+}
+
+.main {
+  background: #fff;
+  padding-top: 0;
+  margin: 40px auto;
+  width: 880px;
+  -moz-border-radius: 24px;
+  -webkit-border-radius: 24px;
+}
+
+.content {
+    padding: 40px;
+}
+
+.navigation {
+  clear: both;
+}
+
+.navigation ul {
+  background-position: right -60px;
+  background-repeat: no-repeat;
+/*  background-image: url(/images/bg_pattern_light_carbon_admin.gif);*/
+  list-style-type: none;
+  -webkit-border-top-left-radius: 0.7em;
+  -webkit-border-top-right-radius: 0.7em;
+  -moz-border-radius-topright: 0.7em;
+  -moz-border-radius-topleft: 0.7em;
+  width: 100%;
+  height: 40px;
+  background-color: #eee;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 3px solid #202020;
+  padding-top: 1em;
+  margin-bottom: 0;
+  border-top-left-radius: 0.7em 0.7em;
+  border-top-right-radius: 0.7em 0.7em;
+}
+
+.navigation li {
+  float: left;
+  display: block;
+  height: 3.0em;
+  margin-left: 1.2em;
+  position: relative;
+}
+
+.navigation li a {
+  padding: 0.9em 0.4em;
+  display: block;
+  width: 100%;
+  height: 4em;
+  min-width: 4em;
+  text-align: center;
+  background-color: #ddd;
+  -webkit-border-top-left-radius: 0.7em;
+  -webkit-border-top-right-radius: 0.7em;
+  -moz-border-radius-topright: 0.7em;
+  -moz-border-radius-topleft: 0.7em;
+  border-top-left-radius: 0.7em 0.7em;
+  border-top-right-radius: 0.7em 0.7em;
+}
+
+.navigation li a:hover {
+  background-color: #fefefe;
+}
+
+.navigation li a:active {
+  background-color: white;
+  color: green;
+}
+
+#user_nav {
+  background-color: #ddeedd;
+  min-width: 300px;
+  float: right;
+  padding: 0.4em 0.6em;
+  margin-top: 0;
+  -webkit-border-bottom-left-radius: 0.7em;
+  -moz-border-radius-bottomleft: 0.7em;
+  border-bottom-left-radius: 0.7em;
+}
+
+
+
+
