@@ -64,7 +64,7 @@
       if(waited++ < 4) {
         window.setTimeout("wait()", 500);
       } else {
-        position++;
+        if(position != 0) position++;
         waited = 0;
         window.setTimeout("type()", 500);
       }
