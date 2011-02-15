@@ -14,8 +14,8 @@
   
   <div id="speech_bubble">
     <div id="bubble_text">
-      <span id="current"><var></var></span><br />
-      <span id="next"><var></var></span><br />
+      <span id="current" class="fill_text"><var></var></span><br />
+      <span id="next" class="fill_text"><var></var></span><br />
     </div>
     <div id="bubble_arrow"></div>
   </div>
@@ -23,8 +23,8 @@
   <img src="./images/gps_indicator.png" id="marker" class="pulse" height="21" width="32" alt="" />
   
   <script>
-    var MAX_ITERATIONS = 5;
-    var text = "40.754983,-73.984027next:  San Francisco, CA";
+    var MAX_ITERATIONS = 9;
+    var text = "messages deceleratednext:  San Francisco, CA";
     var fixed = "";
     var size = 10;
     var position = 0;
@@ -71,6 +71,9 @@
     }
     
     $(document.body).click(function () {
+      // $(".fill_text").each(function(e) {
+      //   alert(e);
+      // });
       if ($("#speech_bubble").is(":hidden")) {
         $("#speech_bubble").show("fast", wait());
       }
