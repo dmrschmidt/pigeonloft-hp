@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link rel="stylesheet" href="./stylesheets/box2.css" type="text/css" media="screen" />
+  <script type="text/javascript" src="./javascripts/jquery.min.js"></script>
+  <script type="text/javascript" src="./javascripts/typewriter.js"></script>
+  <title>messaging. decelerated.</title>
+</head>
+
+<body>
+  
+  <div id="speech_bubble">
+    <div id="bubble_text">
+      <span id="current"><var></var></span><br />
+      <span id="next"><var></var></span><br />
+    </div>
+    <div id="bubble_arrow"></div>
+  </div>
+  
+  <img src="./images/gps_indicator.png" id="marker" class="pulse" height="21" width="32" alt="" />
+  
+  <script>
+    var MAX_ITERATIONS = 5;
+    var text = "40.754983,-73.984027next:  San Francisco, CA";
+    var fixed = "";
+    var size = 10;
+    var position = 0;
+    var iteration = 0;
+    var waited = 0;
+    
+    function getChar() {
+      return (iteration < MAX_ITERATIONS - 1)
+        ? Math.floor(Math.random() * 10)
+        : text[position];
+    }
+    
+    function type() {
+      var current = fixed + getChar();
+      var span = (position < 20) ? "current" : "next";
+      $("#"+span+" var").replaceWith('<var>' + current + '</var>');
+      iteration = (iteration < MAX_ITERATIONS) ? (iteration + 1) : 0 ;
+      if(iteration == 0) {
+        if(position == 19) fixed = "";
+        else fixed = current;
+        position++;
+      }
+      if(position < text.length) {
+        if(position == 25) {
+          $("#"+span+" var").append(' ');
+          window.setTimeout("wait()", 500);
+        } else {
+          timeout = (position == 20 && iteration == 0) ? 800 : 5;
+          window.setTimeout("type()", timeout);
+        }
+      }
+    }
+    
+    function wait() {
+      var span = (position < 20) ? "current" : "next";
+      $("#"+span+" var").append('.');
+      if(waited++ < 4) {
+        window.setTimeout("wait()", 500);
+      } else {
+        position++;
+        waited = 0;
+        window.setTimeout("type()", 500);
+      }
+    }
+    
+    $(document.body).click(function () {
+      if ($("#speech_bubble").is(":hidden")) {
+        $("#speech_bubble").show("fast", wait());
+      }
+    });
+  </script>
+  
+</body>
+</html>

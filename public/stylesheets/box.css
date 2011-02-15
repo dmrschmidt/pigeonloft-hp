@@ -1,0 +1,65 @@
+body {
+  overflow: hidden;
+  background-image: url(../images/cork.png);
+  font-size: 1em;
+}
+
+#postcard {
+  position: absolute;
+  display: block;
+  right: 10em;
+  top: 6em;
+  rotation: -2deg;
+  -webkit-transform: rotate(-2deg);
+  -moz-transform: rotate(-2deg);
+}
+
+#marker {
+  display: block;
+  position: absolute;
+  left: 43em;
+  top: 19em;
+}
+
+#text {
+  padding: 0.3em;
+  position: absolute;
+  left: 42em;
+  top: 14em;
+  width: 10em;
+  height: 4em;
+  opacity: 0.6;
+  background-color: #000;
+  border-radius: 0.4em;
+}
+
+#text span {
+  color: white;
+  font-family: "Courier New";
+  font-weight: normal;
+  font-size: 0.7em;
+}
+
+.line {
+  padding-top: 1.1em;
+  padding-right: 0.6em;
+  display: block;
+  text-align: right;
+}
+
+@-webkit-keyframes pulse {
+ from {
+   opacity: 0.3;
+ }
+ to {
+   opacity: 1.0;
+ }
+}
+
+#pulse {
+  -webkit-animation-name: pulse;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-direction: alternate;
+}

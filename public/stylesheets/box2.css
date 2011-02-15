@@ -1,0 +1,87 @@
+body {
+  overflow: hidden;
+  background-image: url(../images/pigeon_ny.jpg);
+  font-size: 1em;
+}
+
+#postcard {
+  position: absolute;
+  display: block;
+  right: 10em;
+  top: 6em;
+  rotation: -2deg;
+  -webkit-transform: rotate(-2deg);
+  -moz-transform: rotate(-2deg);
+}
+
+#marker {
+  display: block;
+  position: absolute;
+  left: 687px;
+  top: 415px;
+  cursor: pointer;
+}
+
+#speech_bubble {
+  display: none;
+  position: absolute;
+  left: 660px;
+  top: 360px;
+}
+
+#bubble_arrow {
+  position: absolute;
+  left: 33px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #000;
+  opacity: 0.6;
+  background-color: transparent;
+}
+
+#bubble_text {
+  padding: 0.3em;
+  width: 16em;
+  height: 2.5em;
+  opacity: 0.6;
+  background-color: #000;
+  border-radius: 0.4em;
+  -moz-border-radius: 0.4em;
+  -webkit-border-radius: 0.4em;
+}
+
+#bubble_text span {
+  color: white;
+  font-family: "Courier New";
+  font-weight: normal;
+  font-size: 0.7em;
+}
+
+#next {
+  padding-top: 0.5em;
+  padding-right: 0.6em;
+  margin-left: 7em;
+  display: block;
+}
+
+@-webkit-keyframes pulse {
+ 0% {
+   opacity: 0.4;
+ }
+ 50% {
+    opacity: 0.9;
+  }
+ 100% {
+   opacity: 1.0;
+ }
+}
+
+.pulse {
+  -webkit-animation-name: pulse;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-direction: alternate;
+}
