@@ -32,7 +32,7 @@ body {
 }
 
 #mantra h1 {
-  text-shadow: 5px 3px 10px #cc845a, -10px -1px -5px #1a100b;
+  text-shadow: 5px 3px 10px #5d5249, -10px -1px -5px #1a100b;
   rotation: -4deg;
   -webkit-transform: rotate(-8deg);
   -moz-transform: rotate(-4deg);
