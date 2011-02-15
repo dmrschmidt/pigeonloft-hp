@@ -50,7 +50,7 @@
       if(position < text.length) {
         if(position == 25) {
           $("#"+span+" var").append(' ');
-          window.setTimeout("wait()", 500);
+          window.setTimeout("wait()", 1200);
         } else {
           timeout = (position == 20 && iteration == 0) ? 800 : 5;
           window.setTimeout("type()", timeout);
@@ -61,7 +61,7 @@
     function wait() {
       var span = (position < 20) ? "current" : "next";
       $("#"+span+" var").append('.');
-      if(waited++ < 4) {
+      if(waited++ < 5) {
         window.setTimeout("wait()", 500);
       } else {
         if(position != 0) position++;
