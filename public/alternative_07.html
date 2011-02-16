@@ -6,79 +6,30 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <link rel="stylesheet" href="./stylesheets/box2.css" type="text/css" media="screen" />
   <script type="text/javascript" src="./javascripts/jquery.min.js"></script>
+  <script type="text/javascript" src="./javascripts/jquery.class.js"></script>
   <script type="text/javascript" src="./javascripts/typewriter.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      var typewriter = new Typewriter("#speech_bubble");
+    });
+  </script>
   <title>messaging. decelerated.</title>
 </head>
 
 <body>
   
-  <div id="speech_bubble">
+  <div id="speech_bubble" data-iterations="20">
     <div id="bubble_text">
-      <span id="current" class="fill_text"><var></var></span><br />
-      <span id="next" class="fill_text"><var></var></span><br />
+      <span class="fill_text" data-text="messaging decelerated" data-prefill="true"><var></var></span><br />
+      <div id="second_line">
+        <span class="fill_text" data-text="next: " data-prepause="800"><var></var></span>
+        <span class="fill_text" data-text="San Francisco, CA" data-prepause="1200" data-prefill="true"><var></var></span>
+      </div>
     </div>
     <div id="bubble_arrow"></div>
   </div>
   
   <img src="./images/gps_indicator.png" id="marker" class="pulse" height="21" width="32" alt="" />
-  
-  <script>
-    var MAX_ITERATIONS = 9;
-    var text = "messages deceleratednext:  San Francisco, CA";
-    var fixed = "";
-    var size = 10;
-    var position = 0;
-    var iteration = 0;
-    var waited = 0;
-    
-    function getChar() {
-      return (iteration < MAX_ITERATIONS - 1)
-        ? Math.floor(Math.random() * 10)
-        : text[position];
-    }
-    
-    function type() {
-      var current = fixed + getChar();
-      var span = (position < 20) ? "current" : "next";
-      $("#"+span+" var").replaceWith('<var>' + current + '</var>');
-      iteration = (iteration < MAX_ITERATIONS) ? (iteration + 1) : 0 ;
-      if(iteration == 0) {
-        if(position == 19) fixed = "";
-        else fixed = current;
-        position++;
-      }
-      if(position < text.length) {
-        if(position == 25) {
-          $("#"+span+" var").append(' ');
-          window.setTimeout("wait()", 1200);
-        } else {
-          timeout = (position == 20 && iteration == 0) ? 800 : 5;
-          window.setTimeout("type()", timeout);
-        }
-      }
-    }
-    
-    function wait() {
-      var span = (position < 20) ? "current" : "next";
-      $("#"+span+" var").append('.');
-      if(waited++ < 5) {
-        window.setTimeout("wait()", 500);
-      } else {
-        if(position != 0) position++;
-        waited = 0;
-        window.setTimeout("type()", 500);
-      }
-    }
-    
-    $(document.body).click(function () {
-      // $(".fill_text").each(function(e) {
-      //   alert(e);
-      // });
-      if ($("#speech_bubble").is(":hidden")) {
-        $("#speech_bubble").show("fast", wait());
-      }
-    });
-  </script>
   
 </body>
 </html>
