@@ -6,20 +6,17 @@ var Typebox = $.Class.create({
      * properties
      */
     _max_waiting : 10,
-    _element : null,
-    _text : "",
-    _fixed : "",
-    _current : "",
-    _position : 0,
-    _iteration : 0,
-    _max_iterations: 3,
-    _waited : 0,
-    _started : false,
-    
+    _max_iterations: 3,    
     /*
      * Wrap the passed element into a new Typebox.
      */
     initialize: function(element) {
+      this._fixed = "";
+      this._current = "";
+      this._position = 0;
+      this._iteration = 0;
+      this._waited = 0;
+      this._started = false;
       this._element = $(element);
       this._text = this._element.attr("data-text");
     },
@@ -134,18 +131,12 @@ var Typewriter = $.Class.create({
     /*
      * properties
      */
-    _box : null,
-    _max_iterations : null,
-    _fixed : "",
-    _position : 0,
-    _iteration : 0,
-    _waited : 0,
-    _parts : [],
     
     /*
      * Constructs a new typewriter for the given DOM Object ID.
      */
     initialize: function(box_id, activator) {
+      this._parts = [];
       this._box_id = box_id;
       this._box = $(box_id);
       this._max_iterations = parseInt(this._box.attr("data-iterations"));
