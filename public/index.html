@@ -4,44 +4,83 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <link rel="stylesheet" href="./stylesheets/box.css" type="text/css" media="screen" />
-  <script type="text/javascript" src="./javascripts/jquery.min.js"></script> <!-- https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js -->
-  <script type="text/javascript" src="./javascripts/jquery.color.js"></script>
-  <script type="text/javascript" src="./javascripts/supersized.3.0.core.js"></script>
-  <title>messaging decelerated</title>
+  <link rel="stylesheet" href="./stylesheets/box2.css" type="text/css" media="screen" />
+  <script type="text/javascript" src="./javascripts/jquery.min.js"></script>
+  <script type="text/javascript" src="./javascripts/jquery.class.js"></script>
+  <script type="text/javascript" src="./javascripts/typewriter.js"></script>
   <script type="text/javascript">
-  $(function(){
-    $.fn.supersized.options = {  
-      startwidth: 1200,  
-      startheight: 600,
-      vertical_center: 1,
-      slides : [
-        {image : 'images/background_wood.jpg' }
-      ]
-    };
-        $('#supersized').supersized(); 
+    var markers;
+    var timeouts = [1000, 1000, 500, 900];
+    function display() {
+      $(markers.shift()).fadeIn("fast");
+      if(markers.length > 0) window.setTimeout("display()", timeouts.shift());
+    }
+    $(document).ready(function() {
+      var typewriter_boat   = new Typewriter("#speech_bubble_boat",   "marker_boat");
+      var typewriter_street = new Typewriter("#speech_bubble_street", "marker_street");
+      var typewriter_park   = new Typewriter("#speech_bubble_park",   "marker_park");
+      var typewriter_roof   = new Typewriter("#speech_bubble_roof",   "marker_roof");
+      markers = $(".marker").toArray();
+      window.setTimeout("display()", timeouts.shift());
     });
   </script>
+  <title>messaging decelerated.</title>
 </head>
 
 <body>
   
-  <div id="speech_bubble">
-    <div id="bubble_text">
-      <span id="current" class="fill_text"><var></var></span><br />
-      <span id="next" class="fill_text"><var></var></span><br />
+  <div id="main_image">
+    <img src="./images/pigeon_ny.jpg">
+    
+    <div id="speech_bubble_boat" class="speech_bubble" data-iterations="20">
+      <div class="bubble_text">
+        <span class="fill_text" data-text="John: greets from the NY boat cruise" data-prefill="true"><var></var></span><br />
+        <div id="second_line">
+          <span class="fill_text" data-text="destination: " data-prepause="800"><var></var></span>
+          <span class="fill_text" data-text="Berlin, Germany" data-prepause="1200" data-prefill="true"><var></var></span>
+        </div>
+      </div>
+      <div class="bubble_arrow"></div>
     </div>
-    <div id="bubble_arrow"></div>
+    
+    <div id="speech_bubble_street" class="speech_bubble" data-iterations="20">
+      <div class="bubble_text">
+        <span class="fill_text" data-text="Jim: be back soon..." data-prefill="true"><var></var></span><br />
+        <div class="second_line">
+          <span class="fill_text" data-text="destination: " data-prepause="800"><var></var></span>
+          <span class="fill_text" data-text="San Francisco, CA" data-prepause="1200" data-prefill="true"><var></var></span>
+        </div>
+      </div>
+      <div class="bubble_arrow"></div>
+    </div>
+    
+    <div id="speech_bubble_park" class="speech_bubble" data-iterations="20">
+      <div class="bubble_text">
+        <span class="fill_text" data-text="Jack: Beautiful park here." data-prefill="true"><var></var></span><br />
+        <div class="second_line">
+          <span class="fill_text" data-text="destination: " data-prepause="800"><var></var></span>
+          <span class="fill_text" data-text="London, England" data-prepause="1200" data-prefill="true"><var></var></span>
+        </div>
+      </div>
+      <div class="bubble_arrow"></div>
+    </div>
+    
+    <div id="speech_bubble_roof" class="speech_bubble" data-iterations="20">
+      <div class="bubble_text">
+        <span class="fill_text" data-text="Peter: Amazing roof top view!" data-prefill="true"><var></var></span><br />
+        <div class="second_line">
+          <span class="fill_text" data-text="destination: " data-prepause="800"><var></var></span>
+          <span class="fill_text" data-text="Tokyo, Japan" data-prepause="1200" data-prefill="true"><var></var></span>
+        </div>
+      </div>
+      <div class="bubble_arrow"></div>
+    </div>
+    
+    <img src="./images/marker_boat.png"   id="marker_boat"   class="marker pulse" height="10" width="27" alt="" />
+    <img src="./images/marker_park.png"   id="marker_park"   class="marker pulse" height="13" width="22" alt="" />
+    <img src="./images/marker_street.png" id="marker_street" class="marker pulse" height="13" width="22" alt="" />
+    <img src="./images/marker_roof.png"   id="marker_roof"   class="marker pulse" height="16" width="26" alt="" />
   </div>
-  
-  <div id="mantra">
-    <h1>Is your life...<br /><span class="problem">stressful?</span></h1>
-  </div>
-  <h2><span class="solution">Pigeon Post</span><br />Messaging ye good ol' times</h2>
-  
-  <img src="./images/gps_indicator.png" id="marker" class="pulse" height="14" width="21" alt="" />
-  
-  <img src="./images/pigeon_ny.png" id="postcard" width="600", height="417" alt="" />
   
 </body>
 </html>
