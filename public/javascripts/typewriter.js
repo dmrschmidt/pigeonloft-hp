@@ -1,10 +1,11 @@
 /**
- *
+ * Wraps an element that is to be filled with text.
  */
 var Typebox = $.Class.create({
     /*
      * properties
      */
+    _max_waiting : 10,
     _element : null,
     _text : "",
     _fixed : "",
@@ -16,7 +17,7 @@ var Typebox = $.Class.create({
     _started : false,
     
     /*
-     *
+     * Wrap the passed element into a new Typebox.
      */
     initialize: function(element) {
       this._element = $(element);
@@ -24,23 +25,26 @@ var Typebox = $.Class.create({
     },
     
     /*
-      *
-      */
-     get_inner: function() {
-       return $(this._element.find("var").first());
-     },
+     * Return the inner <var> tag, that will be replaced by the new text.
+     */
+    get_inner: function() {
+      return $(this._element.find("var").first());
+    },
     
     /*
      * Calculates and returns the next character to be displayed.
      */
     get_char: function() {
+      // display dots if in "waiting" mode
       if(this.is_waiting()) {
         var value = '.';
         this._fixed = this._current;
-        if(++this._waited == 10) {
+        // if waiting is finished, reset the text field
+        if(++this._waited == this._max_waiting) {
           this._fixed = "";
           value = '';
         }
+      // display random letter or real character when not waiting
       } else {
         var value = (this._iteration < (this._max_iterations - 1))
           ? Math.floor(Math.random() * 10)
@@ -55,21 +59,21 @@ var Typebox = $.Class.create({
     },
     
     /*
-     *
+     * Returns true if this Typebox is finished printing it's text.
      */
     is_done: function() {
       return this._position >= this._text.length;
     },
     
     /*
-     *
+     * Returns true if this Typebox is currently in waiting mode.
      */
     is_waiting: function() {
-      return this._element.attr("data-prefill") == "true" && this._waited < 10;
+      return this._element.attr("data-prefill") == "true" && this._waited < this._max_waiting;
     },
     
     /*
-     *
+     * Update the Typebox's text with new content.
      */
     update: function() {
       if(!this.is_done()) {
@@ -81,21 +85,21 @@ var Typebox = $.Class.create({
     },
     
     /*
-     *
+     * Returns true on the first run.
      */
     is_firstrun: function() {
       return !this._started;
     },
     
     /*
-     *
+     * Returns true if the output should be performed after a pause.
      */
     should_pause: function() {
       return this._element.attr("data-prepause") && this.is_firstrun();
     },
     
     /*
-     *
+     * Returns the desired interval until the next update should occur.
      */
     get_interval: function() {
       if(this.should_pause()) {
@@ -123,7 +127,8 @@ var Typebox = $.Class.create({
 
 
 /**
- *
+ * Creates a couple of Typeboxes when initiated and manages their filling,
+ * by calling their update methods repetitively.
  */
 var Typewriter = $.Class.create({
     /*
@@ -150,14 +155,14 @@ var Typewriter = $.Class.create({
     },
     
     /*
-     *
+     * Creates a Typebox instance from the given DOM object.
      */
     load_part: function(part) {
       this._parts.push(new Typebox(part));
     },
     
     /*
-     *
+     * Loads all the Typebox instances that are available.
      */
     load_parts: function() {
       var boxes = $(this._box_id + " .fill_text");
@@ -166,7 +171,7 @@ var Typewriter = $.Class.create({
     },
     
     /*
-     *
+     * Registers the document's click functionality.
      */
     register: function() {
       if(this._box.is(":hidden")) {
@@ -175,7 +180,7 @@ var Typewriter = $.Class.create({
     },
     
     /*
-     *
+     * Returns the Typebox instance that is currently in update progress.
      */
     get_part: function() {
       if(this._current_part == null || (this._current_part.is_done() && this._parts.length > 0))
@@ -184,7 +189,8 @@ var Typewriter = $.Class.create({
     },
     
     /*
-     *
+     * Delegates the filling of the Typeboxes to it's respective child
+     * Typebox instances.
      */
     type: function() {
       this.get_part().update();
@@ -193,7 +199,7 @@ var Typewriter = $.Class.create({
     },
     
     /*
-     * methods
+     * 
      */
     toString: function() {
       return this.property('BoxId');
