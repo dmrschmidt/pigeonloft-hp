@@ -60,10 +60,9 @@ body {
 }
 
 #second_line {
-  padding-top: 0.5em;
+  padding-top: 0em;
   padding-right: 0.6em;
-  margin-left: 7em;
-  display: block;
+  margin-left: 5em;
 }
 
 @-webkit-keyframes pulse {
