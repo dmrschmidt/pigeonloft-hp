@@ -105,7 +105,7 @@ var Typebox = $.Class.create({
       if(this.should_pause()) {
         return parseInt(this._element.attr("data-prepause"));
       } else if(this.is_waiting()) {
-        return 500;
+        return 350;
       } else {
         return 10;
       }
@@ -115,7 +115,7 @@ var Typebox = $.Class.create({
      *
      */
     toString: function() {
-      return this._element.id;
+      return this._element.attr("data-text");
     },
     
   }, {
@@ -140,18 +140,26 @@ var Typewriter = $.Class.create({
     _position : 0,
     _iteration : 0,
     _waited : 0,
-    _current_text : "messaging decelerated",
     _parts : [],
     
     /*
      * Constructs a new typewriter for the given DOM Object ID.
      */
-    initialize: function(box_id) {
+    initialize: function(box_id, activator) {
       this._box_id = box_id;
       this._box = $(box_id);
       this._max_iterations = parseInt(this._box.attr("data-iterations"));
       this.load_parts();
-      $(document.body).click(jQuery.proxy(this.register, this));
+      $('#'+activator).click(jQuery.proxy(this.register, this));
+    },
+    
+    /*
+     * Registers the document's click functionality.
+     */
+    register: function() {
+      if(this._box.is(":hidden")) {
+        this._box.show("fast", jQuery.proxy(this.type, this));
+      }
     },
     
     /*
@@ -165,18 +173,9 @@ var Typewriter = $.Class.create({
      * Loads all the Typebox instances that are available.
      */
     load_parts: function() {
-      var boxes = $(this._box_id + " .fill_text");
+      var boxes = this._box.find(".fill_text");
       var parent = this;
       $.each(boxes, function(index, element) { parent.load_part(element) });
-    },
-    
-    /*
-     * Registers the document's click functionality.
-     */
-    register: function() {
-      if(this._box.is(":hidden")) {
-        this._box.show("fast", jQuery.proxy(this.type, this));
-      }
     },
     
     /*

@@ -1,22 +1,23 @@
 body {
   overflow: hidden;
-  background-image: url(../images/cork.png);
+  background-color: #1a100b;
   font-size: 1em;
   margin: 0;
   padding: 0;
 }
 
 #postcard {
+  overflow: hidden;
   position: absolute;
   display: block;
-  left: 35em;
+  left: 30em;
   top: 6em;
   rotation: 2deg;
   -webkit-transform: rotate(2deg);
   -moz-transform: rotate(2deg);
 }
 
-#mantra {
+#question {
   line-height: 1.5em;
   position: absolute;
   left: 0.6em;
@@ -27,11 +28,11 @@ body {
   color: #332116;
 }
 
-#mantra .problem {
+.problem {
   letter-spacing: 0em;
 }
 
-#mantra h1 {
+h1 {
   text-shadow: 5px 3px 10px #5d5249, -10px -1px -5px #1a100b;
   rotation: -4deg;
   -webkit-transform: rotate(-8deg);
@@ -40,14 +41,11 @@ body {
 
 h2 {
   text-align: right;
-  rotation: 2deg;
-  -webkit-transform: rotate(2deg);
-  -moz-transform: rotate(2deg);
   z-index: 999;
   font-family: "Helvetica Neue";
   position: absolute;
-  left: 32em;
-  top: 16em;
+  right: 2em;
+  bottom: 2em;
   opacity: 0.9;
   color: #332116;
   font-size: 1.5em;
@@ -64,9 +62,10 @@ h2 .solution {
 
 #speech_bubble {
   display: none;
+  z-index: 999;
   position: absolute;
-  left: 660px;
-  top: 360px;
+  left: 757px;
+  top: 240px;
 }
 
 #bubble_arrow {
@@ -99,47 +98,20 @@ h2 .solution {
   font-size: 0.7em;
 }
 
-#next {
-  padding-top: 0.5em;
-  padding-right: 0.6em;
-  margin-left: 7em;
-  display: block;
-}
-
-
 #marker {
   z-index: 999;
   display: block;
   position: absolute;
-  left: 870px;
-  top: 295px;
+  left: 310px;
+  top: 220px;
   cursor: pointer;
 }
 
-#text {
-  padding: 0.3em;
-  position: absolute;
-  left: 42em;
-  top: 14em;
-  width: 10em;
-  height: 4em;
-  opacity: 0.6;
-  background-color: #000;
-  border-radius: 0.4em;
-}
-
-#text span {
-  color: white;
-  font-family: "Courier New";
-  font-weight: normal;
-  font-size: 0.7em;
-}
-
-.line {
-  padding-top: 1.1em;
-  padding-right: 0.6em;
-  display: block;
-  text-align: right;
+.second_line {
+/*  padding-top: 1.1em;*/
+  padding-left: 2.5em;
+/*  display: block;*/
+/*  text-align: right;*/
 }
 
 @-webkit-keyframes pulse {

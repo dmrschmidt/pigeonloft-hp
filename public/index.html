@@ -8,7 +8,20 @@
   <script type="text/javascript" src="./javascripts/jquery.min.js"></script> <!-- https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js -->
   <script type="text/javascript" src="./javascripts/jquery.color.js"></script>
   <script type="text/javascript" src="./javascripts/supersized.3.0.core.js"></script>
-  <title>messaging. decelerated.</title>
+  <title>messaging decelerated</title>
+  <script type="text/javascript">
+  $(function(){
+    $.fn.supersized.options = {  
+      startwidth: 1200,  
+      startheight: 600,
+      vertical_center: 1,
+      slides : [
+        {image : 'images/background_wood.jpg' }
+      ]
+    };
+        $('#supersized').supersized(); 
+    });
+  </script>
 </head>
 
 <body>
@@ -28,67 +41,7 @@
   
   <img src="./images/gps_indicator.png" id="marker" class="pulse" height="14" width="21" alt="" />
   
-  <img src="./images/map.png" id="map" width="1300", height="900" alt="" />
-  
   <img src="./images/pigeon_ny.png" id="postcard" width="600", height="417" alt="" />
-  
-  <script>
-    var MAX_ITERATIONS = 9;
-    var text = "messages deceleratednext:  San Francisco, CA";
-    var fixed = "";
-    var size = 10;
-    var position = 0;
-    var iteration = 0;
-    var waited = 0;
-    
-    function getChar() {
-      return (iteration < MAX_ITERATIONS - 1)
-        ? Math.floor(Math.random() * 10)
-        : text[position];
-    }
-    
-    function type() {
-      var current = fixed + getChar();
-      var span = (position < 20) ? "current" : "next";
-      $("#"+span+" var").replaceWith('<var>' + current + '</var>');
-      iteration = (iteration < MAX_ITERATIONS) ? (iteration + 1) : 0 ;
-      if(iteration == 0) {
-        if(position == 19) fixed = "";
-        else fixed = current;
-        position++;
-      }
-      if(position < text.length) {
-        if(position == 25) {
-          $("#"+span+" var").append(' ');
-          window.setTimeout("wait()", 500);
-        } else {
-          timeout = (position == 20 && iteration == 0) ? 800 : 5;
-          window.setTimeout("type()", timeout);
-        }
-      }
-    }
-    
-    function wait() {
-      var span = (position < 20) ? "current" : "next";
-      $("#"+span+" var").append('.');
-      if(waited++ < 4) {
-        window.setTimeout("wait()", 500);
-      } else {
-        if(position != 0) position++;
-        waited = 0;
-        window.setTimeout("type()", 500);
-      }
-    }
-    
-    $(document.body).click(function () {
-      // $(".fill_text").each(function(e) {
-      //   alert(e);
-      // });
-      if ($("#speech_bubble").is(":hidden")) {
-        $("#speech_bubble").show("fast", wait());
-      }
-    });
-  </script>
   
 </body>
 </html>

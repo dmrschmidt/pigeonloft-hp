@@ -1,7 +1,13 @@
 body {
   overflow: hidden;
-  background-image: url(../images/pigeon_ny.jpg);
+
+  background-color: #000;
+  margin: 0;
   font-size: 1em;
+}
+
+#main_image {
+  position: relative;
 }
 
 #postcard {
@@ -14,22 +20,59 @@ body {
   -moz-transform: rotate(-2deg);
 }
 
-#marker {
-  display: block;
+.marker {
+  display: none;
   position: absolute;
-  left: 687px;
-  top: 415px;
   cursor: pointer;
 }
 
-#speech_bubble {
-  display: none;
-  position: absolute;
-  left: 660px;
-  top: 360px;
+#marker_boat {
+  left: 250px;
+  top: 120px;
 }
 
-#bubble_arrow {
+#marker_street {
+  left: 703px;
+  top: 430px;
+}
+
+#marker_park {
+  left: 775px;
+  top: 500px;
+}
+
+#marker_roof {
+  left: 1112px;
+  top: 427px;
+}
+
+
+.speech_bubble {
+  display: none;
+  position: absolute;
+}
+
+#speech_bubble_street {
+  left: 670px;
+  top: 365px;
+}
+
+#speech_bubble_park {
+  left: 742px;
+  top: 435px;
+}
+
+#speech_bubble_boat {
+  left: 159px;
+  top: 70px;
+}
+
+#speech_bubble_roof {
+  left: 900px;
+  top: 365px;
+}
+
+.bubble_arrow {
   position: absolute;
   left: 33px;
   width: 0;
@@ -41,7 +84,11 @@ body {
   background-color: transparent;
 }
 
-#bubble_text {
+#speech_bubble_roof .bubble_arrow {
+  left: 215px;
+}
+
+.bubble_text {
   padding: 0.3em;
   width: 16em;
   height: 2.5em;
@@ -52,17 +99,15 @@ body {
   -webkit-border-radius: 0.4em;
 }
 
-#bubble_text span {
+.bubble_text span {
   color: white;
   font-family: "Courier New";
   font-weight: normal;
   font-size: 0.7em;
 }
 
-#second_line {
+.second_line {
   padding-top: 0em;
-  padding-right: 0.6em;
-  margin-left: 5em;
 }
 
 @-webkit-keyframes pulse {
