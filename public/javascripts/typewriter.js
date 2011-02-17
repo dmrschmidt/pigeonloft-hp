@@ -5,8 +5,8 @@ var Typebox = $.Class.create({
     /*
      * properties
      */
-    _max_waiting : 10,
-    _max_iterations: 3,    
+    _max_waiting : 15,
+    _max_iterations: 3,
     /*
      * Wrap the passed element into a new Typebox.
      */
@@ -102,7 +102,7 @@ var Typebox = $.Class.create({
       if(this.should_pause()) {
         return parseInt(this._element.attr("data-prepause"));
       } else if(this.is_waiting()) {
-        return 350;
+        return 100;
       } else {
         return 10;
       }
@@ -113,13 +113,7 @@ var Typebox = $.Class.create({
      */
     toString: function() {
       return this._element.attr("data-text");
-    },
-    
-  }, {
-    /*
-     * properties
-     */
-    getset: [['BoxId', '_box_id']]
+    }
 });
 
 
@@ -192,11 +186,6 @@ var Typewriter = $.Class.create({
      * 
      */
     toString: function() {
-      return this.property('BoxId');
+      return this._box_id;
     }
-  }, {
-    /*
-     * properties
-     */
-    getset: [['BoxId', '_box_id']]
 });

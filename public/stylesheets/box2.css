@@ -68,7 +68,7 @@ body {
 }
 
 #speech_bubble_roof {
-  left: 900px;
+  left: 930px;
   top: 365px;
 }
 
@@ -85,7 +85,7 @@ body {
 }
 
 #speech_bubble_roof .bubble_arrow {
-  left: 215px;
+  left: 185px;
 }
 
 .bubble_text {
@@ -97,6 +97,14 @@ body {
   border-radius: 0.4em;
   -moz-border-radius: 0.4em;
   -webkit-border-radius: 0.4em;
+}
+
+#speech_bubble_street .bubble_text {
+  width: 14em;
+}
+
+#speech_bubble_roof .bubble_text {
+  width: 14em;
 }
 
 .bubble_text span {
@@ -111,21 +119,38 @@ body {
 }
 
 @-webkit-keyframes pulse {
- 0% {
-   opacity: 0.4;
- }
- 40% {
-    opacity: 0.9;
-  }
- 100% {
-   opacity: 0.9;
- }
+ 0%   { opacity: 0.4; }
+ 40%  { opacity: 0.9; }
+ 100% { opacity: 0.9; }
 }
 
+/*@-moz-keyframes pulse {
+  0%   { opacity: 0.4; }
+  40%  { opacity: 0.9; }
+  100% { opacity: 0.9; }
+}
+@-o-keyframes pulse {
+  from   { opacity: 0.4; }
+  to  { opacity: 0.9; }
+
+}
+*/
 .pulse {
   -webkit-animation-name: pulse;
   -webkit-animation-duration: 1.5s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-in-out;
   -webkit-animation-direction: alternate;
+/*  -moz-animation-name: pulse;
+  -moz-animation-duration: 1.5s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: ease-in-out;
+  -moz-animation-direction: alternate;
+  -o-animation-name: pulse;
+  -o-transition-duration: 1.5s;
+  -o-transition-property: opacity;
+  -o-animation-iteration-count: infinite;
+  -o-transition-timing-function: ease-in-out;
+  -o-animation-direction: alternate;
+*/
 }
