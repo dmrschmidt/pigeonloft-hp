@@ -26,48 +26,48 @@ body {
   cursor: pointer;
 }
 
-#marker_boat {
+#marker_typewriter_boat {
   left: 248px;
   top: 114px;
 }
 
-#marker_street {
+#marker_typewriter_street {
   left: 703px;
   top: 430px;
 }
 
-#marker_park {
+#marker_typewriter_park {
   left: 775px;
   top: 500px;
 }
 
-#marker_roof {
+#marker_typewriter_roof {
   left: 1112px;
   top: 428px;
 }
 
 
-.speech_bubble {
+.typewriter {
   display: none;
   position: absolute;
 }
 
-#speech_bubble_street {
+#typewriter_street {
   left: 671px;
   top: 370px;
 }
 
-#speech_bubble_park {
+#typewriter_park {
   left: 743px;
   top: 439px;
 }
 
-#speech_bubble_boat {
+#typewriter_boat {
   left: 220px;
   top: 60px;
 }
 
-#speech_bubble_roof {
+#typewriter_roof {
   left: 930px;
   top: 365px;
 }
@@ -84,7 +84,7 @@ body {
   background-color: transparent;
 }
 
-#speech_bubble_roof .bubble_arrow {
+#typewriter_roof .bubble_arrow {
   left: 185px;
 }
 
@@ -99,11 +99,11 @@ body {
   -webkit-border-radius: 0.4em;
 }
 
-#speech_bubble_street .bubble_text {
+#typewriter_street .bubble_text {
   width: 14em;
 }
 
-#speech_bubble_roof .bubble_text {
+#typewriter_roof .bubble_text {
   width: 14em;
 }
 
