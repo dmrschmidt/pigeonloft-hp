@@ -1,13 +1,27 @@
 body {
   overflow: hidden;
-
   background-color: #000;
   margin: 0;
   font-size: 1em;
 }
 
-#main_image {
-  position: relative;
+#photo_disclaimer {
+  font-family: Arial;
+  font-size: 0.8em;
+  position: absolute;
+  left: 1em;
+  top: 50.5em;
+  color: #000;
+  opacity: 0.4;
+}
+
+#photo_disclaimer a {
+  text-decoration: none;
+  color: #000;
+}
+
+#photo_disclaimer a:hover {
+  font-weight: bold;
 }
 
 #postcard {

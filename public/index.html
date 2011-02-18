@@ -23,71 +23,66 @@
       markers = $(".marker").toArray();
       window.setTimeout("display()", timeouts.shift());
     });
-    // $(document).ready(function() {
-    //    $('#'+activator).click(function() {
-    //      if(this._box.is(":hidden")) {
-    //        this._box.show("fast", jQuery.proxy(this.type, this));
-    //      }
-    //    })
-    // });
   </script>
   <title>coming soon...</title>
 </head>
 
 <body>
   
-  <div id="main_image">
-    <img src="./images/pigeon_ny.jpg">
-    
-    <div id="typewriter_boat" class="typewriter" data-autostart="false">
-      <div class="bubble_text">
-        <span class="typewrite" data-prefill="true">Jim-Ming: 在纽约乘船游览精彩</span><br />
-        <div class="second_line">
-          <span class="typewrite" data-prepause="800">destination:</span>
-          <span class="typewrite" data-prepause="1200" data-prefill="true">Beijing, China</span>
-        </div>
+  <img src="./images/pigeon_ny.jpg">
+  
+  <p id="photo_disclaimer">
+    original photograph by <a href="http://www.flickr.com/photos/alotor/">Alonso Javier Torres</a>
+  </p>
+  
+  <div id="typewriter_boat" class="typewriter" data-autostart="false">
+    <div class="bubble_text">
+      <span class="typewrite" data-prefill="true">Jim-Ming: 在纽约乘船游览精彩</span><br />
+      <div class="second_line">
+        <span class="typewrite" data-prepause="800">destination:</span>
+        <span class="typewrite" data-prepause="1200" data-prefill="true">Beijing, China</span>
       </div>
-      <div class="bubble_arrow"></div>
     </div>
-    
-    <div id="typewriter_street" class="typewriter" data-autostart="false">
-      <div class="bubble_text">
-        <span class="typewrite" data-prefill="true">Jack: be back soon...</span><br />
-        <div class="second_line">
-          <span class="typewrite" data-prepause="800">destination:</span>
-          <span class="typewrite" data-prepause="1200" data-prefill="true">San Francisco, CA</span>
-        </div>
-      </div>
-      <div class="bubble_arrow"></div>
-    </div>
-    
-    <div id="typewriter_park" class="typewriter" data-autostart="false">
-      <div class="bubble_text">
-        <span class="typewrite" data-prefill="true">Johnnie: Awesome park here, mate.</span><br />
-        <div class="second_line">
-          <span class="typewrite" data-prepause="800">destination:</span>
-          <span class="typewrite" data-prepause="1200" data-prefill="true">Sydney, Australia</span>
-        </div>
-      </div>
-      <div class="bubble_arrow"></div>
-    </div>
-    
-    <div id="typewriter_roof" class="typewriter" data-autostart="false">
-      <div class="bubble_text">
-        <span class="typewrite" data-prefill="true">Janina: Wundervoller Ausblick!</span><br />
-        <div class="second_line">
-          <span class="typewrite" data-prepause="800">destination:</span>
-          <span class="typewrite" data-prepause="1200" data-prefill="true">Berlin, Germany</span>
-        </div>
-      </div>
-      <div class="bubble_arrow"></div>
-    </div>
-    
-    <img src="./images/marker_boat.png"   id="marker_typewriter_boat"   class="marker pulse" height="16" width="30" alt="" />
-    <img src="./images/marker_park.png"   id="marker_typewriter_park"   class="marker pulse" height="13" width="22" alt="" />
-    <img src="./images/marker_street.png" id="marker_typewriter_street" class="marker pulse" height="13" width="22" alt="" />
-    <img src="./images/marker_roof.png"   id="marker_typewriter_roof"   class="marker pulse" height="16" width="26" alt="" />
+    <div class="bubble_arrow"></div>
   </div>
+  
+  <div id="typewriter_street" class="typewriter" data-autostart="false">
+    <div class="bubble_text">
+      <span class="typewrite" data-prefill="true">Jack: be back soon...</span><br />
+      <div class="second_line">
+        <span class="typewrite" data-prepause="800">destination:</span>
+        <span class="typewrite" data-prepause="1200" data-prefill="true">San Francisco, CA</span>
+      </div>
+    </div>
+    <div class="bubble_arrow"></div>
+  </div>
+  
+  <div id="typewriter_park" class="typewriter" data-autostart="false">
+    <div class="bubble_text">
+      <span class="typewrite" data-prefill="true">Johnnie: Awesome park here, mate.</span><br />
+      <div class="second_line">
+        <span class="typewrite" data-prepause="800">destination:</span>
+        <span class="typewrite" data-prepause="1200" data-prefill="true">Sydney, Australia</span>
+      </div>
+    </div>
+    <div class="bubble_arrow"></div>
+  </div>
+  
+  <div id="typewriter_roof" class="typewriter" data-autostart="false">
+    <div class="bubble_text">
+      <span class="typewrite" data-prefill="true">Janina: Wundervoller Ausblick!</span><br />
+      <div class="second_line">
+        <span class="typewrite" data-prepause="800">destination:</span>
+        <span class="typewrite" data-prepause="1200" data-prefill="true">Berlin, Germany</span>
+      </div>
+    </div>
+    <div class="bubble_arrow"></div>
+  </div>
+  
+  <img src="./images/marker_boat.png"   id="marker_typewriter_boat"   class="marker pulse" height="16" width="30" alt="" />
+  <img src="./images/marker_park.png"   id="marker_typewriter_park"   class="marker pulse" height="13" width="22" alt="" />
+  <img src="./images/marker_street.png" id="marker_typewriter_street" class="marker pulse" height="13" width="22" alt="" />
+  <img src="./images/marker_roof.png"   id="marker_typewriter_roof"   class="marker pulse" height="16" width="26" alt="" />
   
 </body>
 </html>
