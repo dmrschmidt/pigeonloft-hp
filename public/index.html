@@ -8,22 +8,7 @@
   <script type="text/javascript" src="./javascripts/jquery.min.js"></script>
   <script type="text/javascript" src="./javascripts/jquery.class.js"></script>
   <script type="text/javascript" src="./javascripts/typewriter.js"></script>
-  <script type="text/javascript">
-    var markers;
-    var timeouts = [1000, 1000, 500, 900];
-    function display() {
-      $(markers.shift()).fadeIn("fast");
-      if(markers.length > 0) window.setTimeout("display()", timeouts.shift());
-    }
-    $(document).ready(function() {
-      var typewriter_boat   = new Typewriter("#typewriter_boat",   "marker_typewriter_boat");
-      var typewriter_street = new Typewriter("#typewriter_street", "marker_typewriter_street");
-      var typewriter_park   = new Typewriter("#typewriter_park",   "marker_typewriter_park");
-      var typewriter_roof   = new Typewriter("#typewriter_roof",   "marker_typewriter_roof");
-      markers = $(".marker").toArray();
-      window.setTimeout("display()", timeouts.shift());
-    });
-  </script>
+  <script type="text/javascript" src="./javascripts/speech_bubbles.js"></script>
   <title>coming soon...</title>
 </head>
 
@@ -81,10 +66,10 @@
     <div class="bubble_arrow"></div>
   </div>
   
-  <img src="./images/marker_boat.png"   id="marker_typewriter_boat"   class="marker pulse" height="16" width="30" alt="" />
-  <img src="./images/marker_park.png"   id="marker_typewriter_park"   class="marker pulse" height="13" width="22" alt="" />
-  <img src="./images/marker_street.png" id="marker_typewriter_street" class="marker pulse" height="13" width="22" alt="" />
-  <img src="./images/marker_roof.png"   id="marker_typewriter_roof"   class="marker pulse" height="16" width="26" alt="" />
+  <img src="./images/marker_boat.png"   id="marker_typewriter_boat"   class="marker pulse typewriter-starter" data-start-typewriter="typewriter_boat"   height="16" width="30" alt="" />
+  <img src="./images/marker_park.png"   id="marker_typewriter_park"   class="marker pulse typewriter-starter" data-start-typewriter="typewriter_park"   height="13" width="22" alt="" />
+  <img src="./images/marker_street.png" id="marker_typewriter_street" class="marker pulse typewriter-starter" data-start-typewriter="typewriter_street" height="13" width="22" alt="" />
+  <img src="./images/marker_roof.png"   id="marker_typewriter_roof"   class="marker pulse typewriter-starter" data-start-typewriter="typewriter_roof"   height="16" width="26" alt="" />
   
 </body>
 </html>

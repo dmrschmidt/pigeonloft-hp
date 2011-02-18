@@ -35,7 +35,7 @@ body {
 }
 
 .marker {
-  display: none;
+/*  display: none;*/
   position: absolute;
   cursor: pointer;
 }
@@ -62,7 +62,7 @@ body {
 
 
 .typewriter {
-  display: none;
+/*  display: none;*/
   position: absolute;
 }
 
