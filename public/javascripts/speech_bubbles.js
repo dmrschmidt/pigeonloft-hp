@@ -33,7 +33,20 @@ $(document).ready(function() {
       box.show("fast");
     })
   });
-  // let the markers appear sequentially
-  markers = $(".marker").toArray();
-  window.setTimeout("display()", timeouts.shift());
+  
+  // hide the launchrock container
+  $('#container').hide();
+  
+  /*
+   * When the background image is fully loaded, fade in the launchrock widget
+   * and let our markers appear sequentially.
+   */
+  $('#background_image').load(function() {
+    // show the launcrock widget
+    $('#container').fadeIn("slow");
+    
+    // let the markers appear sequentially
+    markers = $(".marker").toArray();
+    window.setTimeout("display()", timeouts.shift());
+  });
 });
