@@ -23,6 +23,10 @@
     })();
 
   </script>
+
+  <!-- launcrock includes -->
+  <link rel="stylesheet" href="http://legacy.launchrock.com/api/lr.api.0.2.css">
+  <script src="http://legacy.launchrock.com/api/lr.api.0.5-min.js"></script>
 </head>
 
 <body>
@@ -34,6 +38,9 @@
     <a href="http://creativecommons.org/licenses/by/2.0/">by</a>
     <a href="http://www.flickr.com/photos/alotor/">Alonso Javier Torres</a>
   </p>
+  
+  <!-- launcrock widget -->
+  <div id="container"></div>
   
   <div id="typewriter_boat" class="typewriter" data-autostart="false">
     <div class="bubble_text">
@@ -84,5 +91,49 @@
   <img src="./images/marker_street.png" id="marker_typewriter_street" class="marker pulse typewriter-starter" data-start-typewriter="typewriter_street" height="13" width="22" alt="" />
   <img src="./images/marker_roof.png"   id="marker_typewriter_roof"   class="marker pulse typewriter-starter" data-start-typewriter="typewriter_roof"   height="16" width="26" alt="" />
   
+  <!-- launcrock script -->
+  <script>
+	$(document).ready(function(){
+	    LR.lrInstance = new LrInstance('container',{
+
+	        tagLine: "Messaging Decelerated...",
+	        description: "You'll be entering a new era of photo-sharing in an exciting social and gaming-like approach, while we decelerate messaging...",
+	        refCodeUrl: "http://pigeon-loft.com/?ref=",
+	        lrDomain: "pigeon-loft.com",
+	        apiKey: "977703fee69f7aa80ddf9e057bcd2884",
+	        inviteList: "Launching soon. Enter your email to join our invite list:"
+	    });        
+
+	    // Handles events related to signup form, form validations
+	    // and submitting the form to the server:
+	    LR.signupForm = new SignupForm({
+	        secondaryPostLocation: ""
+	    });
+
+
+	    // Handles rendering the post submit content:
+	    LR.postSubmit = new PostSignupForm('pagesubmit',{
+	        twitterHandle: "pigeonary",
+	        twitterMessage: "PigeonPost is going to decelerate messaging soon and I'm one of the first in line! Join me. #launch",
+	        newUserHeaderText: "Thanks! Want to get an early invitation?",
+	        newUserParagraphText: "Invite at least 3 friends using the link below. The more friends you invite, the sooner you'll get access!<br/><br/>To share with your friends, click 'Recommend', 'Tweet' and 'Invite by Email':",
+	        newUserParagraphText3: "Or copy and paste the following link to share wherever you want!",
+	        returningUserHeaderText: "Welcome Back!",
+	        returningUserParagraphText: "Invite at least 3 friends using the link below. The more friends you invite, the sooner you'll get access!<br/><br/>To share with your friends, click 'Recommend', 'Tweet' and 'Invite by Email':",
+	        returningUserParagraphText3: "Or copy and paste the following link to share wherever you want!",
+	        statsPreText: "Your live stats: ",
+	        footerLinks: "<a href='http://twitter.com/pigeonary'>Follow Us on Twitter</a> | <a href='http://facebook.com/pigeonary'>Like Us on Facebook</a>"
+	,showDescription: true,
+	showTagLine: true,
+	showHeaderText: true,
+	showParagraphText: true,
+	showStats: true,
+	showShareButtons: true,
+	showFooterLinks: true    });
+
+
+	});
+
+  </script>
 </body>
 </html>
