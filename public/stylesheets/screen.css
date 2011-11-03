@@ -34,6 +34,19 @@ body {
   -moz-transform: rotate(-2deg);
 }
 
+#container {
+  position: absolute;
+  top: 2em;
+  left: 45em;
+  z-index: 100;
+}
+
+#container #lrcontent {
+  border-radius: 0.4em;
+  -moz-border-radius: 0.4em;
+  -webkit-border-radius: 0.4em;
+}
+
 .marker {
 /*  display: none;*/
   position: absolute;
