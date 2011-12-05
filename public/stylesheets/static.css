@@ -1,17 +1,23 @@
 body {
 	background: transparent url(../images/wood.jpg) repeat;
 	position: relative;
+	font-size: 0.9em;
 	padding-top: 40px; padding-bottom: 300px;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, arial, sans-serif;
 }
 
 a {
-  color: #fff;
+  color: #862a2a;
   text-decoration: none;
   font-weight: bold;
 }
 
 a:visited {
-  color: #fff;
+  color: #005d98;
+}
+
+a:hover {
+  color: #980000;
 }
 
 #background {
@@ -54,8 +60,18 @@ h1 {
 h1.logo {
   font-size: 2.5em;
   text-align: right;
-  padding-right: 1em;
   letter-spacing: 0.09em;
+}
+
+h2 {
+  padding-top: 1.5em;
+}
+
+#main img {
+  position: absolute;
+  left: 0em;
+  top: -5em;
+  z-index:-1;
 }
 
 #main {
@@ -81,6 +97,9 @@ h1.logo {
 }
 
 #footer {
+  -moz-text-shadow: 0 1px 1px #111;
+  -webkit-text-shadow: 0 1px 1px #111;
+  text-shadow: 0 1px 1px #111;
   position: relative;
   width: 600px;
   margin: auto;
@@ -89,3 +108,32 @@ h1.logo {
   color: #ccc;
 }
 
+#footer a {
+  color: #fff;
+}
+
+#footer a:visited {
+  color: #fff;
+}
+
+#ul#social {
+  width: auto;
+  margin: auto;
+  padding: 0;
+}
+
+#footer li {
+  float: left;
+  list-style: none;
+  width: 180px;
+  padding-bottom: 1em;
+}
+
+#footer li a {
+  padding: 5px 10px 5px 10px;
+  border-right: 0px solid black;
+}
+
+#footer #copyright {
+  clear: both;
+}

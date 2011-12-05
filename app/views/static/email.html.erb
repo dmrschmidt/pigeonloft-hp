@@ -2,29 +2,23 @@
    - Welcome
 <% end %>
 
-<% content_for :header do %>
-<% end %>
-
 <h1 class="logo">PigeonPost Received</h1>
 <h2>Hooray! You have just received a PigeonPost!</h2>
 
 <div id="text">
-  <p>Hello there,</p>
   <p>
-    a friend of yours has just sent you a postcard using PigeonPost. Awesome!<br />
-
-    He says "@postcard.title".
-
-    To view your postcard just take a look at http://www.pigeon-loft.com.
-
-    Cheerio,
-
+    A friend of yours, "@postcard.user", has just sent you a postcard using PigeonPost. Awesome!
+  </p>
+  <p>
+    They say: <b>"@postcard.title"</b>.
+  </p>
+  <p>
+    To view the whole card just <a href="">visit your personal postcard</a>.
+  </p>
+  <p style="text-align:center; padding-top:3em;">
+    Sincerely,
+  </p>
+  <p style="text-align:center; font-weight:bold; font-size:2em;">
     The PigeonPost Team
   </p>
-  <p>
-    See what's going on here.
-  </p>
 </div>
-
-<% content_for :footer do %>
-<% end %>

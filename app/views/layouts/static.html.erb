@@ -23,18 +23,38 @@
 <div id="container">
 	<header>
 		<div id="header">
-			<%= yield :header %>
+
 		</div>
 	</header>
 	
 	<div id="main" role="main">
+		<img src="/images/pigeon.png" />
 		<%= yield %>
 	</div>
 	
 	<footer>
 		<div id="footer">
-			<a href="">Unsubscribe</a> from PigeonPost notifications<br />
-			Pigeon Loft Pty. Ltd. &copy; 2011 All Rights Reserved
+			<ul id="social">
+				<li>
+					<a href="" id="facebook">
+						<img src="/images/appstore.png" />
+					</a>
+				</li>
+				<li>
+					<a href="" id="facebook">
+						<img src="/images/facebook.png" />
+					</a>
+				</li>
+				<li>
+					<a href="" id="twitter">
+						<img src="/images/twitter.png" />
+					</a>
+				</li>
+			</ul>
+			<div id="copyright">
+				<a href="">Unsubscribe</a> from PigeonPost notifications<br />
+				Pigeon Loft Pty. Ltd. &copy; 2011 All Rights Reserved
+			</div>
 		</div>
 	</footer>
 </div> <!--! end of #container -->
