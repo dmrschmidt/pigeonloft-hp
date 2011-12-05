@@ -1,0 +1,71 @@
+body {
+	background: transparent url(../images/wood.jpg) repeat;
+	position: relative;
+	padding-top: 40px; padding-bottom: 300px;
+}
+
+#background {
+	position: absolute;
+	left:0; top:0; right:0; bottom:0;
+	z-index:-1;
+}
+
+#background .right {
+	position: absolute;
+	left:50%; top:0; right:0; bottom:0;
+	background: -moz-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 99%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0)), color-stop(99%,rgba(0,0,0,0.4))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 99%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 99%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 99%); /* IE10+ */
+	background: linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 99%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#54000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 */
+}
+
+#background .left {
+	position: absolute;
+	left:0; top:0; right:50%; bottom:0;
+	background: -moz-linear-gradient(left, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 99%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.4)), color-stop(99%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0) 99%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0) 99%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0) 99%); /* IE10+ */
+	background: linear-gradient(left, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0) 99%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#54000000',GradientType=1 ); /* IE6-9 */
+}
+
+h1 {
+  color: #805740;
+  -moz-text-shadow: 0 -1px 1px #666666, 0 1px 1px #FFFFFF;
+  -webkit-text-shadow: 0 -1px 1px #666666, 0 1px 1px #FFFFFF;
+  text-shadow: 0 -1px -1px #4d250f, 0 1px 1px #FFFFFF;
+}
+
+h1.logo {
+  font-size: 2.5em;
+  text-align: right;
+  padding-right: 1em;
+  letter-spacing: 0.09em;
+}
+
+#main {
+  color: #33231a;
+  position: relative;
+  width: 600px;
+  margin: auto;
+  margin-top: 4em;
+  padding: 1em;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+
+    background: transparent url(../images/paper_texture.jpg) repeat;
+    background-color: rgba(0,0,0); /* Needed for IEs */
+    -moz-box-shadow: 5px 5px 5px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0px 15px 50px rgba(0,0,0,0.6);
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.6);
+    
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
+    zoom: 1;
+*/}
