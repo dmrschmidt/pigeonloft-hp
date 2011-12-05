@@ -4,6 +4,16 @@ body {
 	padding-top: 40px; padding-bottom: 300px;
 }
 
+a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:visited {
+  color: #fff;
+}
+
 #background {
 	position: absolute;
 	left:0; top:0; right:0; bottom:0;
@@ -68,4 +78,14 @@ h1.logo {
     filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
     -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
     zoom: 1;
-*/}
+}
+
+#footer {
+  position: relative;
+  width: 600px;
+  margin: auto;
+  padding-top: 2em;
+  text-align: center;
+  color: #ccc;
+}
+
