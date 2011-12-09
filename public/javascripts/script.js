@@ -2,11 +2,6 @@
 
 */
 
-
-
-
-
-
 $().ready(function(){
 	$.getJSON('http://pigeonmail.me/postcards/'+postcard_id+'.json', function(data) {
 		console.log(data["postcards"]);
