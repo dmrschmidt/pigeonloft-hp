@@ -2,6 +2,12 @@ body {
 	background: transparent url(../images/wood.jpg) repeat;
 	position: relative;
 	padding-top: 40px; padding-bottom: 100px;
+	color: #33302a;
+  text-shadow: 1px 1px 1px #fff;
+}
+
+a {
+  text-decoration: none;
 }
 
 #background {
@@ -35,8 +41,8 @@ body {
 }
 
 #postcard-shadow {
-	width: 800px;
-	height: 511px;
+	width: 600px;
+	height: 383px;
 	margin: 0 auto;
 	
     background-color: rgb(0,0,0); /* Needed for IEs */
@@ -50,22 +56,30 @@ body {
 }
 
 #postcard {
-	width: 800px;
-	height: 511px;
+	width: 600px;
+	height: 383px;
 	background: transparent url(../images/postcard.jpg) no-repeat;
 	position: relative; /* This protects the inner element from being blurred */
 }
 
 #postcard-text {
-	width: 350px;
+	width: 310px;
 	padding: 20px;
 	font-size: 12pt;
 }
 
 #postcard-recipient {
   position: absolute;
-  left: 495px;
-  top: 213px;
+  left: 373px;
+  top: 156px;
+  width: 220px;
+}
+
+img#stamp {
+  position: absolute;
+  width: 85px;
+  right: 0.9em;
+  top: 0.8em;
 }
 
 .recipient-line {
@@ -77,19 +91,19 @@ body {
 }
 
 #recipient-line-2 {
-  padding-top: 30px;
+  padding-top: 18px;
 }
 
 #recipient-line-3 {
-  padding-top: 30px;
+  padding-top: 18px;
 }
 
 #recipient-line-4 {
-  padding-top: 29px;
+  padding-top: 17px;
 }
 
 #comments-shadow {
-	width: 800px;
+	width: 550px;
 	margin: 10px auto;
 	
     background-color: rgb(0,0,0); /* Needed for IEs */
@@ -103,7 +117,7 @@ body {
 }
 
 #comments {
-	width:800px;
+	width:550px;
 	background: transparent url(../images/paper_texture.jpg) repeat;
 }
 
@@ -116,4 +130,84 @@ ul#comments-list li {
 	background: transparent url(../images/comment_bend.png) left bottom repeat-x;
 	padding: 10px 20px 20px 20px;
 	font-size: 12pt;
+	position: relative;
+	height: 120px;
+	padding-top: 1.5em;
+}
+
+ul#comments-list li img.preview {
+  border:5px solid white;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+  -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+  width: 130px;
+  height: 87px;
+  float: left;
+}
+
+ul#comments-list li img.stapler {
+  position: absolute;
+  left: 55px;
+  top: 22px;
+}
+
+ul#comments-list li p {
+  padding-left: 160px;
+  font-size: 1.2em;
+  margin-top: 0;
+}
+
+.tk-gooddog-new {
+  
+}
+
+#footer {
+  -moz-text-shadow: 0 1px 1px #111;
+  -webkit-text-shadow: 0 1px 1px #111;
+  text-shadow: 0 1px 1px #111;
+  position: relative;
+  width: 600px;
+  margin: auto;
+  padding-top: 2em;
+  text-align: center;
+  color: #ccc;
+}
+
+#footer a {
+  color: #fff;
+}
+
+#footer a:visited {
+  color: #fff;
+}
+
+#ul#social {
+  width: auto;
+  margin: auto;
+  padding: 0;
+}
+
+#footer li {
+  float: left;
+  list-style: none;
+  width: 180px;
+  padding-bottom: 1em;
+}
+
+#footer li a {
+  padding: 5px 10px 5px 10px;
+  border-right: 0px solid black;
+}
+
+#footer li img {
+  -moz-box-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+  -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.6);
+}
+
+#footer #copyright {
+  clear: both;
 }

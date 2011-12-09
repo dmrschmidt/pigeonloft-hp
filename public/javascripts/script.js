@@ -16,7 +16,7 @@ $().ready(function(){
 		for(var comment_number in data["postcards"]["comments"]) {
 			var comment = data["postcards"]["comments"][comment_number];
 			console.log(comment);
-			$("#comments-list").append('<li><img src="'+comment["image_preview_url"]+'" width="240" height="160" /><p>'+comment["text"]+'</p></li>');
+			$("#comments-list").append('<li><img src="'+comment["image_preview_url"]+'" class="preview" /><img src="/images/stapler_needle.png" class="stapler" /><p class="tk-gooddog-new">'+comment["text"]+'</p></li>');
 		}
 	});
 });

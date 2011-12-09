@@ -15,7 +15,9 @@
 
 	<link rel="stylesheet" href="stylesheets/reset.css">
 	<link rel="stylesheet" href="stylesheets/style_card.css">
-
+	
+	<script type="text/javascript" src="http://use.typekit.com/mtm5yby.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	<script src="javascripts/libs/modernizr-2.0.6.min.js"></script>
 	<script type="application/javascript">
     var postcard_id = "<%=h @postcard_id %>";
@@ -34,8 +36,9 @@
 
 		<div id="postcard-shadow">
 			<div id="postcard">
+				<img src="/images/stamp.png" id="stamp" />
 				<div id="postcard-text">
-					<h2></h2>
+					<h2 class="tk-gooddog-new"></h2>
 					<p></p>
 				</div>
 				<div id="postcard-recipient">
@@ -56,7 +59,29 @@
 
 	</div>
 	<footer>
-
+		<div id="footer">
+			<ul id="social">
+				<li>
+					<a href="http://itunes.apple.com/us/app/pigeonpost/id486477236" id="appstore">
+						<img src="/images/appstore.png" />
+					</a>
+				</li>
+				<li>
+					<a href="https://www.facebook.com/pigeonary" id="facebook">
+						<img src="/images/facebook.png" />
+					</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/#!/Pigeonary" id="twitter">
+						<img src="/images/twitter.png" />
+					</a>
+				</li>
+			</ul>
+			<div id="copyright">
+				<a href="mailto:pigeonary@gmail.com?subject=please unsubscribe me&amp;body=Please unsubscribe the E-Mail I am sending this with from your newsletter.">Unsubscribe</a> from PigeonPost notifications<br />
+				Pigeon Loft Pty. Ltd. &copy; 2011 All Rights Reserved
+			</div>
+		</div>
 	</footer>
 </div> <!--! end of #container -->
 
