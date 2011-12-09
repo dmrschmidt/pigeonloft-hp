@@ -1,24 +1,7 @@
 body {
 	background: transparent url(../images/wood.jpg) repeat;
 	position: relative;
-	font-size: 0.9em;
-	padding-top: 40px; padding-bottom: 300px;
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, arial, sans-serif;
-	text-shadow: 0 1px 1px #fff;
-}
-
-a {
-  color: #862a2a;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-a:visited {
-  color: #005d98;
-}
-
-a:hover {
-  color: #980000;
+	padding-top: 40px; padding-bottom: 100px;
 }
 
 #background {
@@ -51,99 +34,60 @@ a:hover {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#54000000',GradientType=1 ); /* IE6-9 */
 }
 
-h1 {
-  color: #805740;
-  -moz-text-shadow: 0 -1px 1px #666666, 0 1px 1px #FFFFFF;
-  -webkit-text-shadow: 0 -1px 1px #666666, 0 1px 1px #FFFFFF;
-  text-shadow: 0 -1px -1px #4d250f, 0 1px 1px #FFFFFF;
-}
-
-h1.logo {
-  font-size: 2.5em;
-  text-align: right;
-  letter-spacing: 0.09em;
-}
-
-h2 {
-  padding-top: 1.5em;
-}
-
-#main img {
-  position: absolute;
-  left: 0em;
-  top: -5em;
-  z-index:-1;
-}
-
-#main {
-  color: #33231a;
-  position: relative;
-  width: 600px;
-  margin: auto;
-  margin-top: 4em;
-  padding: 1em;
-  -moz-border-radius: 12px;
-  -webkit-border-radius: 12px;
-  border-radius: 12px;
-
-    background: transparent url(../images/paper_texture.jpg) repeat;
-    background-color: rgba(0,0,0); /* Needed for IEs */
+#postcard-shadow {
+	width: 800px;
+	height: 511px;
+	margin: 0 auto;
+	
+    background-color: rgb(0,0,0); /* Needed for IEs */
     -moz-box-shadow: 5px 5px 5px rgba(0,0,0,0.6);
     -webkit-box-shadow: 0px 15px 50px rgba(0,0,0,0.6);
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.6);
-    
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.6);
+
     filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
     -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
     zoom: 1;
 }
 
-p.signature {
-  text-align:center;
-  font-weight:bold;
-  font-size:2em;
-  font-family: Zapfino;
-  padding-top:0.1em;
-  text-shadow: 0 1px 1px #fff;
+#postcard {
+	width: 800px;
+	height: 511px;
+	background: transparent url(../images/postcard.jpg) no-repeat;
+	position: relative; /* This protects the inner element from being blurred */
 }
 
-#footer {
-  -moz-text-shadow: 0 1px 1px #111;
-  -webkit-text-shadow: 0 1px 1px #111;
-  text-shadow: 0 1px 1px #111;
-  position: relative;
-  width: 600px;
-  margin: auto;
-  padding-top: 2em;
-  text-align: center;
-  color: #ccc;
+#postcard-text {
+	width: 350px;
+	padding: 20px;
+	font-size: 12pt;
 }
 
-#footer a {
-  color: #fff;
+#comments-shadow {
+	width: 800px;
+	margin: 10px auto;
+	
+    background-color: rgb(0,0,0); /* Needed for IEs */
+    -moz-box-shadow: 5px 5px 5px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0px 15px 50px rgba(0,0,0,0.6);
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.6);
+
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
+    zoom: 1;
 }
 
-#footer a:visited {
-  color: #fff;
+#comments {
+	width:800px;
+	background: transparent url(../images/paper_texture.jpg) repeat;
 }
 
-#ul#social {
-  width: auto;
-  margin: auto;
-  padding: 0;
+ul#comments-list {
+	list-style: none;
+	margin: 0; padding:0;
 }
 
-#footer li {
-  float: left;
-  list-style: none;
-  width: 180px;
-  padding-bottom: 1em;
-}
-
-#footer li a {
-  padding: 5px 10px 5px 10px;
-  border-right: 0px solid black;
-}
-
-#footer #copyright {
-  clear: both;
+ul#comments-list li {
+	background: transparent url(../images/comment_bend.png) left bottom repeat-x;
+	padding: 10px 20px 20px 20px;
+	font-size: 12pt;
 }
