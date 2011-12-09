@@ -62,6 +62,32 @@ body {
 	font-size: 12pt;
 }
 
+#postcard-recipient {
+  position: absolute;
+  left: 495px;
+  top: 213px;
+}
+
+.recipient-line {
+  font-size: 1.2em;
+}
+
+#recipient-line-1 {
+  font-weight: bold;
+}
+
+#recipient-line-2 {
+  padding-top: 30px;
+}
+
+#recipient-line-3 {
+  padding-top: 30px;
+}
+
+#recipient-line-4 {
+  padding-top: 29px;
+}
+
 #comments-shadow {
 	width: 800px;
 	margin: 10px auto;
