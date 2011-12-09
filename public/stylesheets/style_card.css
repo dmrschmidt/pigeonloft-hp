@@ -2,7 +2,7 @@ body {
 	background: transparent url(../images/wood.jpg) repeat;
 	position: relative;
 	padding-top: 40px; padding-bottom: 100px;
-	color: #33302a;
+	color: #402d06;
   text-shadow: 1px 1px 1px #fff;
 }
 
@@ -65,7 +65,8 @@ a {
 #postcard-text {
 	width: 310px;
 	padding: 20px;
-	font-size: 12pt;
+	font-size: 1.3em;
+	line-height: 1.4em;
 }
 
 #postcard-recipient {
@@ -209,5 +210,6 @@ ul#comments-list li p {
 }
 
 #footer #copyright {
+  color: #efefef;
   clear: both;
 }

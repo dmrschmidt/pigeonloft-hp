@@ -7,7 +7,7 @@ $().ready(function(){
 		console.log(data["postcards"]);
 		
 		$("#postcard-text h2").text(data["postcards"]["title"]);
-		$("#postcard-text p").text(data["postcards"]["text"]);
+		$("#postcard-text p").html(data["postcards"]["text"].replace("\n", "&nbsp;<br />"));
 		$("#recipient-line-1").text(data["postcards"]["recipient"]["name"]);
 		$("#recipient-line-2").text(data["postcards"]["recipient"]["address_detail"]["thoroughfare"]);
 		$("#recipient-line-3").text(data["postcards"]["recipient"]["address_detail"]["locality"]);
