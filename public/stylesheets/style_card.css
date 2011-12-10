@@ -77,7 +77,14 @@ a {
   top: 3em;
 }
 
+#flipBox {
+	width: 600px;
+	height: 383px;
+	position: relative;
+}
+
 .postcard-shadow {
+  position: absolute;
 	width: 600px;
 	height: 383px;
 	margin: 0 auto;

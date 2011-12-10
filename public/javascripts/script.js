@@ -37,11 +37,11 @@ $().ready(function(){
 		// toggle display status
 		displayStatus = (displayStatus + 1) % 2;
 		if(displayStatus == 1) {
-			$("#postcard-back-wrapper").hide();
-			$("#postcard-front-wrapper").show();
+			$("#postcard-back-wrapper").fadeToggle("fast");
+			$("#postcard-front-wrapper").fadeToggle("fast");
 		} else {
-			$("#postcard-back-wrapper").show();
-			$("#postcard-front-wrapper").hide();
+			$("#postcard-back-wrapper").fadeToggle("fast");
+			$("#postcard-front-wrapper").fadeToggle("fast");
 		}
 	});
 	
