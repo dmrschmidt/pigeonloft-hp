@@ -133,11 +133,22 @@ img.postcard-front {
 }
 
 #postcard-text {
-	width: 310px;
+	width: 300px;
 	padding: 20px;
-	font-size: 1.3em;
-	line-height: 1.4em;
+	
 	font-family: "Helvetica";
+}
+
+#postcard-text h2.tk-gooddog-new {
+  font-size: 1.9em;
+  line-height: 0.8em;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+#postcard-text p {
+  font-size: 1.5em;
+	line-height: 1.25em;
 }
 
 #postcard-recipient {
