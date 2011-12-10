@@ -59,7 +59,7 @@ a {
   text-shadow: none;
   display: block;
   background-color: #000;
-  opacity: 0.6;
+  opacity: 0.5;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
@@ -70,7 +70,15 @@ a {
 
 #flipPad a:hover {
   background-color: #111;
-  opacity: 0.4;
+  opacity: 0.7;
+  color: #fff261;
+}
+
+#flipPad a:active {
+  color: #fff;
+  -moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.6), 5px 5px 5px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.6), 5px 5px 5px rgba(0,0,0,0.5);
+  box-shadow: -1px -1px 10px rgba(0,0,0,0.6), 0px 0px 5px rgba(0,0,0,0.5);
 }
 
 #flipPad a.bottom {
@@ -129,6 +137,7 @@ img.postcard-front {
 	padding: 20px;
 	font-size: 1.3em;
 	line-height: 1.4em;
+	font-family: "Helvetica";
 }
 
 #postcard-recipient {
