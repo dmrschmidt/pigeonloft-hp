@@ -40,26 +40,78 @@ a {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#54000000',GradientType=1 ); /* IE6-9 */
 }
 
-#postcard-shadow {
+#main {
+  position: relative;
+  width: 600px;
+  margin: auto;
+}
+
+#flipPad {
+
+}
+
+#flipPad a {
+  font-weight: bold;
+  position: absolute;
+  left: -4em;
+  color: #fff;
+  padding: 1em;
+  text-shadow: none;
+  display: block;
+  background-color: #000;
+  opacity: 0.6;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#flipPad a:hover {
+  background-color: #111;
+  opacity: 0.4;
+}
+
+#flipPad a.bottom {
+  top: 3em;
+}
+
+.postcard-shadow {
 	width: 600px;
 	height: 383px;
 	margin: 0 auto;
 	
     background-color: rgb(0,0,0); /* Needed for IEs */
-    -moz-box-shadow: 5px 5px 5px rgba(0,0,0,0.6);
-    -webkit-box-shadow: 0px 15px 50px rgba(0,0,0,0.6);
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.6), 5px 5px 10px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.6), 5px 5px 10px rgba(0,0,0,0.6);
+    box-shadow: -1px -1px 10px rgba(0,0,0,0.6), 5px 5px 10px rgba(0,0,0,0.6);
 
     filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
     -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
     zoom: 1;
 }
 
-#postcard {
+.postcard {
 	width: 600px;
 	height: 383px;
 	background: transparent url(../images/postcard.jpg) no-repeat;
 	position: relative; /* This protects the inner element from being blurred */
+}
+
+#postcard-front.postcard {
+  background: transparent url(../images/paper_texture.jpg) repeat;
+}
+
+.spinner {
+  position: absolute;
+  left: 295px;
+  top: 180px;
+  z-index: 1;
+}
+
+img.postcard-front {
+  position: absolute;
+  width: 600px;
+  height: 383px;
+  z-index: 2;
 }
 
 #postcard-text {
@@ -81,6 +133,14 @@ img#stamp {
   width: 85px;
   right: 0.9em;
   top: 0.8em;
+}
+
+img#sticky-paper {
+  position: absolute;
+  width:300px;
+  left: 150px;
+  top: 27.5em;
+  z-index: 100;
 }
 
 .recipient-line {
@@ -108,9 +168,9 @@ img#stamp {
 	margin: 10px auto;
 	
     background-color: rgb(0,0,0); /* Needed for IEs */
-    -moz-box-shadow: 5px 5px 5px rgba(0,0,0,0.6);
-    -webkit-box-shadow: 0px 15px 50px rgba(0,0,0,0.6);
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.6);
+    -moz-box-shadow: -1px -1px 10px rgba(0,0,0,0.6), 5px 5px 10px rgba(0,0,0,0.6);
+    -webkit-box-shadow: -1px -1px 10px rgba(0,0,0,0.6), 5px 5px 10px rgba(0,0,0,0.6);
+    box-shadow: -1px -1px 10px rgba(0,0,0,0.6), 5px 5px 10px rgba(0,0,0,0.6);
 
     filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
     -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
@@ -132,8 +192,8 @@ ul#comments-list li {
 	padding: 10px 20px 20px 20px;
 	font-size: 12pt;
 	position: relative;
-	height: 120px;
-	padding-top: 1.5em;
+	height: 160px;
+	padding-top: 0.5em;
 }
 
 ul#comments-list li img.preview {
@@ -141,9 +201,9 @@ ul#comments-list li img.preview {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  -moz-box-shadow: 0px 0px 5px rgba(0,0,0,0.6);
-  -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,0.6);
-  box-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+  -moz-box-shadow: 0px 0px 5px rgba(0,0,0,0.6), 5px 5px 10px rgba(0,0,0,0.2);
+  -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,0.6), 5px 5px 10px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.6), 5px 5px 10px rgba(0,0,0,0.2);
   width: 130px;
   height: 87px;
   float: left;
@@ -152,13 +212,35 @@ ul#comments-list li img.preview {
 ul#comments-list li img.stapler {
   position: absolute;
   left: 55px;
-  top: 22px;
+  top: 55px;
 }
 
 ul#comments-list li p {
   padding-left: 160px;
   font-size: 1.2em;
   margin-top: 0;
+}
+
+div.head {
+  color: #4d422e;
+  position: relative;
+  height: 3em;
+}
+
+div.username {
+  font-weight: bold;
+  position: absolute;
+}
+
+div.timestamp {
+  position: absolute;
+  right: 0;
+}
+
+div.location {
+  position: absolute;
+  left: 0;
+  top: 1.3em;
 }
 
 .tk-gooddog-new {
@@ -204,9 +286,9 @@ ul#comments-list li p {
 }
 
 #footer li img {
-  -moz-box-shadow: 0px 0px 5px rgba(0,0,0,0.6);
-  -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,0.6);
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.6);
+  -moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.6), 5px 5px 10px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.6), 5px 5px 10px rgba(0,0,0,0.3);
+  box-shadow: -1px -1px 10px rgba(0,0,0,0.6), 5px 5px 10px rgba(0,0,0,0.3);
 }
 
 #footer #copyright {
