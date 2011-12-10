@@ -10,7 +10,7 @@ $().ready(function(){
 		
 		$("#postcard-front").html('<img src="'+data["postcards"]["image_retina_url"]+'" class="postcard-front" />');
 		$("#postcard-text h2").text(data["postcards"]["title"]);
-		$("#postcard-text p").html(data["postcards"]["text"].replace("\n", "&nbsp;<br />"));
+		$("#postcard-text p").html(data["postcards"]["text"].replace(/\n/g, "&nbsp;<br />"));
 		$("#recipient-line-1").text(data["postcards"]["recipient"]["name"]);
 		$("#recipient-line-2").text(data["postcards"]["recipient"]["address_detail"]["thoroughfare"]);
 		$("#recipient-line-3").text(data["postcards"]["recipient"]["address_detail"]["locality"]);
