@@ -97,6 +97,10 @@ h2 {
     zoom: 1;
 }
 
+#text.introduction {
+  font-size:1.2em;
+}
+
 p.signature {
   text-align:center;
   font-weight:bold;
