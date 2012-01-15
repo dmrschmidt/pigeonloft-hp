@@ -97,6 +97,10 @@ h2 {
     zoom: 1;
 }
 
+pre {
+  font-size: 0.7em;
+}
+
 #text.introduction {
   font-size:1.2em;
 }
