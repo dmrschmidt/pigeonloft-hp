@@ -22,11 +22,4 @@ class StaticController < ApplicationController
     render :welcome, :layout => "static"
   end
   
-  #
-  # temp. google apps verification
-  #
-  def googlecb9784f16be94131
-    render :googlecb9784f16be94131, :layout => false
-  end
-  
 end
