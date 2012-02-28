@@ -23,7 +23,7 @@ $(document).ready(function() {
     var texturedMapType = new google.maps.ImageMapType({
         getTileUrl: function(tileCoord, zoom, ownerDocument)
         {
-            return 'img/textile_texture.png';
+            return 'images/textile_texture.png';
         },
         isPng: true,                    
         tileSize: new google.maps.Size(450, 332)
@@ -34,25 +34,25 @@ $(document).ready(function() {
     map.overlayMapTypes.setAt(0, texturedMapType);
     
     /* drop location markers */
-    var pinMarkerIcon = new google.maps.MarkerImage('img/pin-icon-s.png',
+    var pinMarkerIcon = new google.maps.MarkerImage('images/pin-icon-s.png',
           new google.maps.Size(11, 22), // size
           new google.maps.Point(0,0),  // origin
           new google.maps.Point(6, 19));  // anchor
           
     /* destination markers */
-    var finishMarkerIcon = new google.maps.MarkerImage('img/finish-icon-s.png',
+    var finishMarkerIcon = new google.maps.MarkerImage('images/finish-icon-s.png',
           new google.maps.Size(22, 22), // size
           new google.maps.Point(0,0),  // origin
           new google.maps.Point(6, 19));  // anchor
 
     /* drop location markers */
-    var postcardMarkerIcon = new google.maps.MarkerImage('img/postcard-icon-s.png',
+    var postcardMarkerIcon = new google.maps.MarkerImage('images/postcard-icon-s.png',
           new google.maps.Size(24, 19), // size
           new google.maps.Point(0,0),  // origin
           new google.maps.Point(12, 9));  // anchor
           
     /* user avatar markers */
-    var avatarMarkerIcon = new google.maps.MarkerImage('img/anonymous-s.jpg',
+    var avatarMarkerIcon = new google.maps.MarkerImage('images/anonymous-s.jpg',
           new google.maps.Size(24, 24),  // size
           new google.maps.Point(0,0),  // origin
           new google.maps.Point(12, 12)); // anchor
@@ -236,7 +236,7 @@ $(document).ready(function() {
             reverseGeocode(pickLatLng, i-1);
                 
             var li = $("<li />");
-            var avatar = $('<img src="img/anonymous.jpg" class="avatar" />').attr("alt", dropLoc.dropper_username || "Anonymous");
+            var avatar = $('<img src="images/anonymous.jpg" class="avatar" />').attr("alt", dropLoc.dropper_username || "Anonymous");
             var title = $("<h3/>").text(dropLoc.dropper_username || "Anonymous")
             var route = $('<p class="route"><span class="from"></span><span class="to"></span></p>');
             
