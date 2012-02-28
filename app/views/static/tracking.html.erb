@@ -1,3 +1,96 @@
-<div class="coming_soon">
-  <h1 class="coming_soon" style="padding-bottom: 200px;">Coming Soon</h1>
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Pigeon Post</title>
+	<meta name="description" content="Tracking View - Pigeon Post">
+	<meta name="author" content="Pigeon Loft Pty Ltd.">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<link rel="stylesheet" href="stylesheets/reset.css">
+	<link rel="stylesheet" href="stylesheets/tracking.css">
+	
+	<script type="text/javascript" src="http://use.typekit.com/mtm5yby.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<script src="javascript/libs/modernizr-2.0.6.min.js"></script>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=geometry&key=AIzaSyAU8cPxjnHutFYlRvhTnWOaMPMvvoC4ixw&sensor=false"></script>
+	
+	<script type="application/javascript">
+    	var postcard_id = "<%=h @postcard_id %>";
+  	</script>
+	
+</head>
+<body>
+<div id="background">
+	<div class="left"></div>
+	<div class="right"></div>
 </div>
+<div id="container">
+	<header>
+
+	</header>
+	<div id="main" role="main">
+		
+		<div id="map_container">
+			<div id="map-shadow" class="stack">
+				<div id="map_canvas"></div>
+			</div>
+		</div>
+		<div id="panel_container">
+			<div id="right_panel">
+				<h1 class="tk-gooddog-new" id="title"></h1>
+				<p></p>
+				
+				<div id="travel_log-container">
+					<div id="travel_log-shadow" class="shadow"><div class="nano"><div class="content">
+						<div id="travel_log" class="paperlist">
+							<ul></ul>
+						</div>
+					</div></div></div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<footer>
+		<div id="footer">
+			<ul id="social">
+				<li>
+					<a href="http://itunes.apple.com/us/app/pigeonpost/id486477236" id="appstore">
+						<img src="/images/appstore.png">
+					</a>
+				</li>
+				<li>
+					<a href="https://www.facebook.com/pigeonary" id="facebook">
+						<img src="/images/facebook.png">
+					</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/#!/Pigeonary" id="twitter">
+						<img src="/images/twitter.png">
+					</a>
+				</li>
+			</ul>
+			<div id="copyright">
+				Pigeon Loft Pty. Ltd. © 2011 All Rights Reserved
+			</div>
+		</div>
+	</footer>
+</div> <!--! end of #container -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="javascript/libs/jquery-1.6.2.min.js"><\/script>')</script>
+<script src="javascript/libs/jquery.nanoscroller.min.js"></script>
+
+<!-- scripts concatenated and minified via ant build script-->
+<script src="javascript/tracking.js"></script>
+<!-- end scripts-->
+
+</body>
+</html>
