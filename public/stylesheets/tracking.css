@@ -5,7 +5,7 @@ html, body {
 }
 
 body {
-	background: transparent url(../img/wood.jpg) repeat;
+	background: transparent url(../images/wood.jpg) repeat;
 	position: relative;
 	padding-top: 0px; padding-bottom: 0px;
 }
@@ -54,7 +54,7 @@ h1 {
 }
 
 .paperlist {
-	background: transparent url(../img/paper_texture.jpg) repeat;
+	background: transparent url(../images/paper_texture.jpg) repeat;
 }
 
 .paperlist ul {
@@ -63,7 +63,7 @@ h1 {
 }
 
 .paperlist ul li {
-	background: transparent url(../img/comment_bend.png) left bottom repeat-x;
+	background: transparent url(../images/comment_bend.png) left bottom repeat-x;
 	padding: 10px 20px 20px 20px;
 	font-size: 12pt;
 }
@@ -172,12 +172,12 @@ html, body {
 .route .from {
     display: block;
     padding: 2px 0 2px 16px;
-    background: transparent url(../img/pickup-icon.png) 0 2px no-repeat;
+    background: transparent url(../images/pickup-icon.png) 0 2px no-repeat;
 }
 .route .to {
     display: block;
     padding: 2px 0 2px 16px;
-    background: transparent url(../img/drop-icon.png) 0 2px no-repeat;
+    background: transparent url(../images/drop-icon.png) 0 2px no-repeat;
 }
 
 .distance {
@@ -194,7 +194,7 @@ html, body {
 }
 .stack:after, .stack:before {
     position: absolute;
-	background: #f6f6f6 url(../img/textile_texture.png);
+	background: #f6f6f6 url(../images/textile_texture.png);
 	border: 1px solid #ccc;
 	content: '';
 	z-index: -1;
