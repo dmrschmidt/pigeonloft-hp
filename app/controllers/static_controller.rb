@@ -19,6 +19,7 @@ class StaticController < ApplicationController
   # The postcard tracking page.
   #
   def tracking
+    @postcard_id = params[:view]
     render :tracking, :layout => false
   end
   
