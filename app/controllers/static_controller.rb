@@ -1,6 +1,13 @@
 class StaticController < ApplicationController
   
   #
+  # The launchrock display page.
+  #
+  def launch
+    render :launch, :layout => false
+  end
+  
+  #
   # The postcard view page.
   #
   def postcard
@@ -9,14 +16,14 @@ class StaticController < ApplicationController
   end
   
   #
-  # The launchrock display page.
+  # The postcard tracking page.
   #
-  def launch
-    render :launch, :layout => false
+  def tracking
+    render :tracking, :layout => false
   end
   
   #
-  #
+  # The welcoming homepage.
   #
   def welcome
     render :welcome, :layout => "static"
