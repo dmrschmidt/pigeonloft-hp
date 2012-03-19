@@ -27,6 +27,39 @@
 		</div>
 	</header>
 	
+	<div id="feeds">
+	  <div id="twitter">
+	    <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+	    <script>
+	    new TWTR.Widget({
+	      version: 2,
+	      type: 'profile',
+	      rpp: 4,
+	      interval: 30000,
+	      width: 250,
+	      height: 300,
+	      theme: {
+	        shell: {
+	          background: '#e3e3e3',
+	          color: '#000000'
+	        },
+	        tweets: {
+	          background: '#ffffff',
+	          color: '#595959',
+	          links: '#075beb'
+	        }
+	      },
+	      features: {
+	        scrollbar: false,
+	        loop: false,
+	        live: true,
+	        behavior: 'all'
+	      }
+	    }).render().setUser('pigeonary').start();
+	    </script>
+	  </div>
+	</div>
+	
 	<div id="main" role="main">
 		<img src="/images/pigeon.png" />
 		<%= yield %>
